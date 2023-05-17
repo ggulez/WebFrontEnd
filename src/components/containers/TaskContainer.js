@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchCourseThunk } from "../../store/thunks";
-import { CourseView } from "../views";
+import { fetchTaskThunk } from "../../store/thunks";
+import { TaskView } from "../views";
 
-class CourseContainer extends Component {
+class TaskContainer extends Component {
   componentDidMount() {
     //getting task ID from url
     this.props.fetchTask(this.props.match.params.id);

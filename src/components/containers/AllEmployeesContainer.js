@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllEmployeesThunk } from "../../store/thunks";
-import { AllIEmployeesView } from "../views";
+import { AllEmployeesView } from "../views";
 
 function AllEmployeesContainer() {
   const allEmployees = useSelector((state) => state.allEmloyees);

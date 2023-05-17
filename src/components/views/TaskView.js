@@ -14,4 +14,4 @@ const TaskView = (props) => {
 
 };
 
-export default CourseView;
+export default TaskView;

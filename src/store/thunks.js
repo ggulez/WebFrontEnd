@@ -7,7 +7,7 @@ let path = "http://localhost:5001/api";
 // THUNKS
 
 //All employees
-export const fetchAllEmplyeesThunk = () => async (dispatch) => {
+export const fetchAllEmployeesThunk = () => async (dispatch) => {
   try {
     let res = await axios.get(`${path}/employees`);
     dispatch(ac.fetchAllEmployees(res.data));
@@ -56,7 +56,7 @@ export const addTaskThunk = (task) => async (dispatch) => {
 
 export const deleteTaskThunk = taskId => async dispatch => {
   try {
-    await axios.delete(`${path}/tasks/${tasksId}`);
+    await axios.delete(`${path}/tasks/${taskId}`);
     //delete succesful so change state with dispatch
     dispatch(ac.deleteTask(taskId));
   } catch(err) {
