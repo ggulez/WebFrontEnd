@@ -1,8 +1,5 @@
-
-
-
 const NewTaskView = (props) => {
-  const {handleChange, handleSubmit, error } = props;
+  const { handleChange, handleSubmit, error, isComplete } = props;
 
   return (
     <div className="root">
@@ -13,8 +10,8 @@ const NewTaskView = (props) => {
           </h2>
         </div>
         <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
-          <label style= {{color:'#11153e', fontWeight: 'bold'}}>Description: </label>
-          <input type="text" name="description" onChange ={(e) => handleChange(e)} />
+          <label style={{color:'#11153e', fontWeight: 'bold'}}>Description: </label>
+          <input type="text" name="description" onChange={(e) => handleChange(e)} />
           <br/>
           <br/>
 
@@ -23,27 +20,26 @@ const NewTaskView = (props) => {
           <br/>
           <br/>
 
-          <label style={{color:'#11153e', fontWeight: 'bold'}}>employeeId: </label>
+          <label style={{color:'#11153e', fontWeight: 'bold'}}>Is Complete: </label>
+          <input type="checkbox" name="isComplete" checked={isComplete} onChange={(e) => handleChange(e)} />
+          <br/>
+          <br/>
+
+          <label style={{color:'#11153e', fontWeight: 'bold'}}>Employee ID: </label>
           <input type="text" name="employeeId" onChange={(e) => handleChange(e)} />
           <br/>
           <br/>
           
-          <label style={{color:'#11153e', fontWeight: 'bold'}}>Is Complete: </label>
-          <input type="checkbox" name="isComplete" checked={this.state.isComplete} onChange={(e) => handleChange(e)} />
-          <br/>
-          <br/>
-
           <button type="submit">
             Submit
           </button>
           <br/>
           <br/>
         </form>
-        {error!=="" && <p>{error}</p>}
-        </div>
+        {error !== "" && <p>{error}</p>}
       </div>
-    
-  )
+    </div>
+  );
 }
 
 export default NewTaskView;
