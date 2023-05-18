@@ -18,9 +18,9 @@ class EmployeeContainer extends Component {
   render() {
     return (
       <EmployeeView 
-        emplyee={this.props.employee}
-        editCourse={this.props.editTask}
-        allCourses={this.props.allTasks}
+        employee={this.props.employee}
+        editTask={this.props.editTask}
+        allTasks={this.props.allTasks}
       />
     );
   }
@@ -39,7 +39,7 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     fetchEmployee: (id) => dispatch(fetchEmployeeThunk(id)),
-    editTask: (task) => dispatch(editTaskThunk(course)),
+    editTask: (task) => dispatch(editTaskThunk(task)),
     fetchTasks: () => dispatch(fetchAllTasksThunk()),
 
   };

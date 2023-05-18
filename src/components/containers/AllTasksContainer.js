@@ -7,7 +7,7 @@ import {
   deleteTaskThunk
 } from '../../store/thunks';
 
-import AllCoursesView from '../views/AllTasksView';
+import AllTasksView from '../views/AllTasksView';
 
 class AllTasksContainer extends Component {
     componentDidMount() {
