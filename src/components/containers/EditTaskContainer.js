@@ -44,7 +44,7 @@ class EditTaskContainer extends Component {
         this.state = {
           title: "", 
           timeslot: "",
-          EmployeeId: null, 
+          employeeId: null, 
           redirect: false, 
           redirectId: null,
           error: ""
@@ -58,7 +58,7 @@ class EditTaskContainer extends Component {
         this.setState({
             title: this.props.task.title, 
             timeslot: this.props.task.timeslot,
-            instructorId: this.props.task.emlployeeId, 
+            employeeId: this.props.task.employeeId, 
         });
       }
 

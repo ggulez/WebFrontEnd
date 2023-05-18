@@ -8,8 +8,8 @@ const HomePageView = () => {
   return (
     <div>
       <h6>Final Project</h6>
-      <Link to={'/instructors'} > All Employees </Link>
-      <Link to={'/courses'} > All Tasks </Link>
+      <Link to={'/employees'} > All Employees </Link>
+      <Link to={'/tasks'} > All Tasks </Link>
       
     </div>
   );    

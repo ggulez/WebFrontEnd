@@ -33,7 +33,7 @@ export const fetchEmployeeThunk = (id) => async (dispatch) => {
   }
 };
 
-//All courses
+//All tasks
 export const fetchAllTasksThunk = () => async (dispatch) => {
   try {
     let res = await axios.get(`${path}/tasks`);
@@ -67,7 +67,7 @@ export const deleteTaskThunk = taskId => async dispatch => {
 export const editTaskThunk = task => async dispatch => {
   try {
     let res = await axios.put(`${path}/tasks/${task.id}`, task);
-    //res.data is the updated course object
+    //res.data is the updated tasks object
     dispatch(ac.editTask(res.data));
   } catch(err) {
     console.error(err);

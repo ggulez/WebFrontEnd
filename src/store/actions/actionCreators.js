@@ -13,7 +13,7 @@ export const fetchAllEmployees = (employees) => {
   };
 };
 
-//Single instructor
+//Single employee
 export const fetchEmployee = (employee) => {
   return {
     type: at.FETCH_EMPLOYEE,
@@ -21,7 +21,7 @@ export const fetchEmployee = (employee) => {
   };
 };
 
-//All courses
+//All tasks
 export const fetchAllTasks = (tasks) => {
   return {
     type: at.FETCH_ALL_TASKS,
@@ -51,7 +51,7 @@ export const editTask = (task) => {
   };
 };
 
-//Single course
+//Single task
 export const fetchTask = (task) => {
   return {
     type: at.FETCH_TASK,

@@ -4,7 +4,7 @@ import { fetchAllEmployeesThunk } from "../../store/thunks";
 import { AllEmployeesView } from "../views";
 
 function AllEmployeesContainer() {
-  const allEmployees = useSelector((state) => state.allEmloyees);
+  const allEmployees = useSelector((state) => state.allEmployees);
   const dispatch = useDispatch();
 
   //replaces componentDidMount

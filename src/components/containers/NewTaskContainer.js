@@ -28,7 +28,7 @@ class NewTaskContainer extends Component {
 
     handleSubmit = async event => {
         event.preventDefault();
-        //dont need ID because the course has not been created yet
+        //dont need ID because the task has not been created yet
         if(this.state.title===""){
           this.setState({error:"Title field is required"});
           return;
