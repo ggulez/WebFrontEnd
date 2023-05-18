@@ -34,9 +34,9 @@ class NewTaskContainer extends Component {
           return;
         }
         let task = {
-            title: this.state.title,
-            timeslot: this.state.timeslot,
-            location: this.state.location,
+            description: this.state.description,
+            priority: this.state.priority,
+            isComplete: this.state.isComplete,
             employeeId: this.state.employeeId
         };
         
