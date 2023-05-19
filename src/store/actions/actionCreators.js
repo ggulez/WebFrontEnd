@@ -51,3 +51,8 @@ export const deleteEmployee = (employeeId) => ({
   type: at.DELETE_EMPLOYEE,
   payload: employeeId,
 });
+
+export const editEmployee = (employee) => ({
+  type: at.EDIT_EMPLOYEE,
+  payload: employee,
+});

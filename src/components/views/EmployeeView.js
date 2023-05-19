@@ -42,6 +42,7 @@ const EmployeeView = (props) => {
           )}
         </div>
       </div>
+      <Link to={`/editemployee/${employee.id}`}>Edit Employee</Link>
     </div>
   );
 };
