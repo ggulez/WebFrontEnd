@@ -28,9 +28,6 @@ const TaskView = (props) => {
         <input type="checkbox" checked={task.isComplete} disabled />
         <br />
 
-        <label>Employee ID:</label>
-        <input type="text" value={task.employeeId} disabled />
-        <br />
       </form>
       <br />
       <Link to={`/edittask/${task.id}`}>Edit task information</Link>

@@ -24,11 +24,6 @@ const NewTaskView = (props) => {
           <input type="checkbox" name="isComplete" checked={isComplete} onChange={(e) => handleChange(e)} />
           <br/>
           <br/>
-
-          <label style={{color:'#11153e', fontWeight: 'bold'}}>Employee ID: </label>
-          <input type="text" name="employeeId" onChange={(e) => handleChange(e)} />
-          <br/>
-          <br/>
           
           <button type="submit">
             Submit

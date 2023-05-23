@@ -13,7 +13,7 @@ class NewTaskContainer extends Component {
           description: "", 
           priority: "",
           isComplete: false,
-          employeeId: null, 
+          //employeeId: null, 
           redirect: false, 
           redirectId: null,
           error: ""
@@ -37,7 +37,7 @@ class NewTaskContainer extends Component {
             description: this.state.description,
             priority: this.state.priority,
             isComplete: this.state.isComplete,
-            employeeId: this.state.employeeId
+            //employeeId: this.state.employeeId
         };
         
         let newTask = await this.props.addTask(task);
