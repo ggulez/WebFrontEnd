@@ -38,7 +38,7 @@ class EditTaskContainer extends Component {
       [name]: value
     });
 
-    if (name === "employeeId" && value !== "staff") {
+    if (name === "employeeId" && value !== "unassigned") {
       this.props.editTask({ id: this.props.task.id, employeeId: value });
     }
   };
@@ -117,7 +117,7 @@ class EditTaskContainer extends Component {
           <br />
 
           <select name="employeeId" value={this.state.employeeId} onChange={this.handleChange}>
-            <option value="staff">Staff</option>
+            <option value="unassigned">Unassigned</option>
             {allEmployees.map(employee => (
               <option value={employee.id} key={employee.id}>{employee.firstname}</option>
             ))}

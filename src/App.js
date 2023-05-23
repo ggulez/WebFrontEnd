@@ -1,8 +1,6 @@
-import "./App.css";
-
-//Router
-import { Switch, Route } from "react-router-dom";
-//Components
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar';
 import {
   HomePageContainer,
   EmployeeContainer,
@@ -14,29 +12,27 @@ import {
   NewEmployeeContainer,
   EditEmployeeContainer
 } from './components/containers';
-
-// if you create separate components for adding/editing 
-// a student or instructor, make sure you add routes to those
-// components here
+import './App.css'; 
 
 const App = () => {
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/" component={HomePageContainer} />
-        <Route exact path="/employees" component={AllEmployeesContainer} />
-        <Route exact path="/employee/:id" component={EmployeeContainer} />
-        <Route exact path="/tasks" component={AllTasksContainer} />
-        <Route exact path="/newtask" component={NewTaskContainer} />
-        <Route exact path="/task/:id" component={TaskContainer} />
-        <Route exact path="/edittask/:id" component={EditTaskContainer} />
-        <Route exact path="/newemployee" component={NewEmployeeContainer} />
-        <Route exact path="/editemployee/:id" component={EditEmployeeContainer} />
-
-      </Switch>        
+      <Navbar />
+      <div className="content-container">
+        <Switch>
+          <Route exact path="/" component={HomePageContainer} />
+          <Route exact path="/employees" component={AllEmployeesContainer} />
+          <Route exact path="/employee/:id" component={EmployeeContainer} />
+          <Route exact path="/tasks" component={AllTasksContainer} />
+          <Route exact path="/newtask" component={NewTaskContainer} />
+          <Route exact path="/task/:id" component={TaskContainer} />
+          <Route exact path="/edittask/:id" component={EditTaskContainer} />
+          <Route exact path="/newemployee" component={NewEmployeeContainer} />
+          <Route exact path="/editemployee/:id" component={EditEmployeeContainer} />
+        </Switch>
+      </div>
     </div>
   );
 }
 
 export default App;
-

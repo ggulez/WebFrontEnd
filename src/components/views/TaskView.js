@@ -12,7 +12,7 @@ const TaskView = (props) => {
           <h3>{task.employee.firstname + ' ' + task.employee.lastname}</h3>
         </Link>
       ) : (
-        <h3>staff</h3>
+        <h3>unassigned</h3>
       )}
 
       <form>
