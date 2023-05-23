@@ -22,13 +22,14 @@ const AllEmployeesView = (props) => {
         return (
           <div key={employee.id}>
             <Link to={`/employee/${employee.id}`}>
-              <h1>{name}</h1>
+              <h3>{name}</h3>
             </Link>
-            <p>{employee.department}</p>
-            <button onClick={() => deleteEmployee(employee.id)}>Delete</button>
+            <p style={{ fontWeight: 'bold' }}>{employee.department}</p>
+            <button onClick={() => deleteEmployee(employee.id)}>X</button>
           </div>
         );
       })}
+      <br />
       <Link to="/newemployee">
         <button>Add New Employee</button>
       </Link>
